@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_lottie import st_lottie
 import requests
 
 # ---------- Page Configuration ----------
@@ -39,14 +38,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ---------- Lottie Animation Loader ----------
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
-lottie_machine = load_lottieurl("https://lottie.host/60cf688e-31e3-4f2d-8b65-76e9a1bfbf15/g7Q5eQF2X3.json")
 
 # ---------- App Header ----------
 st_lottie(lottie_machine, height=180, key="machine")
