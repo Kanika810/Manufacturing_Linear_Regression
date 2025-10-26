@@ -40,7 +40,6 @@ st.markdown("""
 
 
 # ---------- App Header ----------
-st_lottie(lottie_machine, height=180, key="machine")
 st.title("📦 Manufacturing Equipment Output Prediction")
 st.write("### Enter Machine Parameters Below")
 
