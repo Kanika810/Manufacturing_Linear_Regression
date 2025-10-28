@@ -1,6 +1,5 @@
 import streamlit as st
 import requests
-import plotly.graph_objects as go  # ✅ for visualization
 
 # ---------- Page Configuration ----------
 st.set_page_config(
@@ -97,25 +96,6 @@ if submitted:
 
     st.success(f"✅ **Predicted Equipment Output:** {predicted_output} units/hour")
     st.balloons()
-
-    # ---------- Add Visual Aids ----------
-    st.subheader("📊 Predicted Output Visualization")
-
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=predicted_output,
-        title={'text': "Equipment Output (units/hour)"},
-        gauge={
-            'axis': {'range': [0, 100]},
-            'bar': {'color': "#F5B041"},
-            'steps': [
-                {'range': [0, 20], 'color': "#922B21"},
-                {'range': [20, 50], 'color': "#B7950B"},
-                {'range': [50, 100], 'color': "#196F3D"},
-            ]
-        }
-    ))
-    st.plotly_chart(fig, use_container_width=True)
 
     # ---------- Add Result Interpretation ----------
     st.subheader("📈 Interpretation")
