@@ -88,7 +88,8 @@ if submitted:
         predicted_output = round((inj_temp * 0.3 + inj_pressure * 0.4 + operator_exp * 0.2) / 10, 2)
 
     st.success(f"✅ **Predicted Equipment Output:** {predicted_output} units/hour")
-    st.balloons()
+    st.toast("⚙️ Prediction completed successfully!")
+    st.image("https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif", width=200)
 
     # ---------- Visualization ----------
     st.subheader("📊 Predicted Output Visualization")
