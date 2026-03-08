@@ -1,9 +1,9 @@
-pandas
+streamlit==1.33.0
+pandas==2.2.2
 numpy
 scikit-learn
-seaborn
 matplotlib
+seaborn
+altair==5.2.0
 scipy
 requests
-streamlit==1.33.0
-altair==4.2.2
