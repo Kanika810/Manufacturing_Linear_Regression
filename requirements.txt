@@ -1,3 +1,4 @@
+python==3.10
 streamlit==1.33.0
 pandas==2.2.2
 numpy
@@ -7,3 +8,4 @@ seaborn
 altair==5.2.0
 scipy
 requests
+
